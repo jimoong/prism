@@ -140,11 +140,11 @@ var PrismSlider = (function(window, undefined) {
    */
   PrismSlider.prototype.addSlides_ = function() {
 
-    this.slides.forEach(function(path, i) {
+    this.slides.forEach(function(slide, i) {
       // Render only first slide.
       var callback = (i === 0) ? this.renderSlide_.bind(this, i) : null;
       // Replace image path with <img> object.
-      this.slides[i] = this.loadImage_(path, callback);
+      this.slides[i] = this.loadImage_(slide.src, callback);
 
     }, this);
   };

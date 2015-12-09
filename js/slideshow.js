@@ -41,14 +41,7 @@ var slideshow = (function(window, undefined) {
    * Set of images to be used.
    * @type {Array}
    */
-  var slides = [
-    'img/nature-a.jpg',
-    'img/nature-b.jpg',
-    'img/nature-c.jpg',
-    'img/graffiti-a.jpg',
-    'img/graffiti-b.jpg',
-    'img/graffiti-c.jpg'
-  ];
+  var slides = [].slice.call(document.querySelectorAll("img.img_bg"));
 
   /**
    * Set of masks with related effects.
@@ -56,7 +49,7 @@ var slideshow = (function(window, undefined) {
    */
   var masks = [
     {
-      source: 'img/masks/prism-1.svg',
+      source: document.querySelectorAll("img.img_mask")[0].src,
       effects: {
         flip: false,
         rotate: 0,
@@ -64,7 +57,7 @@ var slideshow = (function(window, undefined) {
       }
     },
     {
-      source: 'img/masks/prism-2.svg',
+      source: document.querySelectorAll("img.img_mask")[1].src,
       effects: {
         flip: 'Y',
         rotate: 0,
@@ -72,7 +65,7 @@ var slideshow = (function(window, undefined) {
       }
     },
     {
-      source: 'img/masks/prism-3.svg',
+      source: document.querySelectorAll("img.img_mask")[2].src,
       effects: {
         flip: 'Y',
         rotate: 30,
@@ -80,7 +73,7 @@ var slideshow = (function(window, undefined) {
       }
     },
     {
-      source: 'img/masks/prism-4.svg',
+      source: document.querySelectorAll("img.img_mask")[3].src,
       effects: {
         flip: 'Y',
         rotate: -30,
@@ -88,7 +81,7 @@ var slideshow = (function(window, undefined) {
       }
     },
     {
-      source: 'img/masks/prism-5.svg',
+      source: document.querySelectorAll("img.img_mask")[4].src,
       effects: {
         flip: 'X',
         rotate: -30,
@@ -96,7 +89,7 @@ var slideshow = (function(window, undefined) {
       }
     },
     {
-      source: 'img/masks/prism-6.svg',
+      source: document.querySelectorAll("img.img_mask")[5].src,
       effects: {
         flip: 'X',
         rotate: 30,
